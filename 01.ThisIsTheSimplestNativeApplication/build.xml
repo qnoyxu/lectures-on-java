@@ -1,0 +1,7 @@
+<project name="sample" default="showOS" basedir=".">
+
+  <target name="showOS">
+    <echo message="OS = ${os.name}"/>
+  </target>
+
+</project>
