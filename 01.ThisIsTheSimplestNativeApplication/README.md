@@ -16,15 +16,17 @@ Hello World!
 
 ## 構成
 
-* `HelloWorld.java`・・・ソースコード
+* `src`・・・ソースコードを置く場所
+  * `HelloWorld.java`・・・今回のソースコード
 * `README.md`・・・このファイル
-* `dist`・・・アプリ本体を格納する場所
+* `dist`・・・バイナリファイル達を格納する場所。`build`って名前のことも多い
 * `build.xml`・・・`Ant`の設定ファイル
 * `hello`・・・アプリを呼び出すコマンド
 
 ## Ant使わずにビルド
 
 ```sh
+$ cd src
 $ javac HelloWorld.java
 ```
 `HelloWorld.class`っていうバイナリファイルができてる！
@@ -33,10 +35,12 @@ $ javac HelloWorld.java
 
 ```sh
 $ java HelloWorld
+Hello World!
 ```
 
 ## デプロイ！
 
 ```sh
-$ mv HelloWorld.class dist/
+cd ..
+$ mv src/HelloWorld.class dist/
 ```
