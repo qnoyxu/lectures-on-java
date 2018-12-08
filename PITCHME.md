@@ -8,7 +8,7 @@
 * アプリ開発って何をするの？
 * アプリ開発はどういう流れでやるの？
 
-を紹介します。
+を **Javaベースで** 紹介します。
 
 プログラミング未経験のインフラエンジニアに教えることを想定
 
@@ -194,6 +194,8 @@
 
 ## `Install for Ubuntu`
 
++++
+
 ### `ここからの対象者`
 
 Linuxのコマンドを使える人
@@ -209,13 +211,15 @@ Linuxのコマンドを使える人
 ### `Java`
 
 ```sh
-sudo apt-get install default-jre default-jdk
+$ sudo apt-get install default-jre default-jdk
 ```
+* `default-jre`が実行環境
+* `default-jdk`が開発環境
 
 +++
 
 ### `Ant`
 
 ```sh
-sudo apt-get install ant
+$ sudo apt-get install ant
 ```
