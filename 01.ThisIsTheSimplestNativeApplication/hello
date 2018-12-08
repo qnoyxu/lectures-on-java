@@ -1,0 +1,3 @@
+set -ue
+
+cd dist && java HelloWorld && cd ..
