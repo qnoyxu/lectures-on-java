@@ -1,7 +1,24 @@
-<project name="sample" default="showOS" basedir=".">
+<project name="hello" default="compile" basedir=".">
 
-  <target name="showOS">
+  <property name="src" location="src"/>
+  <property name="dist"  location="dist"/>
+
+  <target name="show-os">
     <echo message="OS = ${os.name}"/>
+  </target>
+
+  <target name="show-jre-version" depends="show-os">
+    <echo message="JRE-VERSION = ${java.specification.version}"/>
+  </target>
+
+  <target name="compile" depends="show-jre-version">
+    <echo message="COMPILE"/>
+    <mkdir dir="${dist}"/>
+    <javac srcdir="${src}" destdir="${dist}"/>
+  </target>
+
+  <target name="clean" depends="show-jre-version">
+    <delete dir="${dist}"/>
   </target>
 
 </project>
